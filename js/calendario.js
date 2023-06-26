@@ -1,7 +1,6 @@
 const daysTag = document.querySelector(".days"),
 currentDate = document.querySelector(".current-date"),
 prevNextIcon = document.querySelectorAll(".icons span");
-const meses = ["Enero", "Febrero" , "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre" , "Octubre", "Noviembre" , "Diciembre "]
 
 // getting new date, current year and month
 let date = new Date(),
@@ -9,8 +8,8 @@ currYear = date.getFullYear(),
 currMonth = date.getMonth();
 
 // storing full name of all months in array
-const months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+              "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
