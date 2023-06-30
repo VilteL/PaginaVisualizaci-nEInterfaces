@@ -103,6 +103,22 @@
     }
 
 }
+#container_organizar{
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+#btn-organizar{
+    margin: 2rem 2rem 0 0;
+    background-color: #cdcdcd;
+    border:none;
+    padding: 0.7rem;
+    border-radius: 8px;
+}
+#btn-organizar:hover{
+    background-color: #b8b8b8;
+}
+
 
 .materia__button:hover{
    transform: translateY(-5px);
