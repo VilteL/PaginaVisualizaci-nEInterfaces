@@ -119,7 +119,7 @@
 .content__title{
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 }
 
 /* ---------------------------------------- */
@@ -287,4 +287,29 @@
         width: 45%;
     }
     
+}
+
+.cabecera{
+    display: flex;
+    padding: 0.7rem;
+    background-color:  var(--secondary-bg);
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-header{
+    background-color: var(--secondary-bg);
+    border: none;
+    margin: 0 0.2rem;
+    color: var(--primary-bg);
+    cursor: pointer;
+}
+.btn-header:hover{
+    text-decoration: underline;
+}
+
+#img-perfil{
+    width: 3.s2rem;
+    height: 3.2rem;
+    margin: 0.5rem;
+    cursor: pointer;
 }
