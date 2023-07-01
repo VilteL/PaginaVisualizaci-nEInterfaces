@@ -113,28 +113,32 @@ p {
     background-color: #715aff;
     color: white;
 }
-#botones-ocultos{
+
+#botones-ocultos {
     display: none;
 }
 
 @media screen and (max-width: 865px) {
-    
-    #side-bar{
+
+    #side-bar {
         display: none;
     }
-    
+
     #formulario {
-      max-width: 90%;
-      transform: translateX(-50%);
-      margin: 2rem 0;
+        max-width: 90%;
+        transform: translateX(-50%);
+        margin: 2rem 0;
     }
-    form label{
+
+    form label {
         font-size: 15px;
     }
-    #ingresar-btn{
-        font-size:18px;
+
+    #ingresar-btn {
+        font-size: 18px;
     }
-    #botones-ocultos{
+
+    #botones-ocultos {
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
@@ -142,27 +146,30 @@ p {
         justify-content: space-evenly;
         gap: 0.5rem;
     }
-    #botones-ocultos button{ 
+
+    #botones-ocultos button {
         width: 80%;
         padding: 10px;
         border: 1px solid #5840f8;
         border-radius: 10px;
-        color:black;
+        color: black;
         background-color: white;
         cursor: pointer;
     }
-    #botones-ocultos button:hover{
+
+    #botones-ocultos button:hover {
         background-color: #5840f8;
         color: white;
     }
-    hr{
+
+    hr {
         width: 100%;
-        border-style:ridge ;
+        border-style: ridge;
         border-color: rgb(107, 106, 106);
         margin-bottom: 15px;
     }
-   
 
 
-    
-  }
+
+
+}
