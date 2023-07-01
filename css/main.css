@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     margin: 0;
     width: 100%;
     height: 100%;
@@ -112,3 +113,56 @@ p {
     background-color: #715aff;
     color: white;
 }
+#botones-ocultos{
+    display: none;
+}
+
+@media screen and (max-width: 865px) {
+    
+    #side-bar{
+        display: none;
+    }
+    
+    #formulario {
+      max-width: 90%;
+      transform: translateX(-50%);
+      margin: 2rem 0;
+    }
+    form label{
+        font-size: 15px;
+    }
+    #ingresar-btn{
+        font-size:18px;
+    }
+    #botones-ocultos{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0.5rem;
+    }
+    #botones-ocultos button{ 
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #5840f8;
+        border-radius: 10px;
+        color:black;
+        background-color: white;
+        cursor: pointer;
+    }
+    #botones-ocultos button:hover{
+        background-color: #5840f8;
+        color: white;
+    }
+    hr{
+        width: 100%;
+        border-style:ridge ;
+        border-color: rgb(107, 106, 106);
+        margin-bottom: 15px;
+    }
+   
+
+
+    
+  }
