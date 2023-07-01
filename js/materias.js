@@ -21,7 +21,7 @@ listaMaterias.forEach(materia => {
     materiaElement.classList.add('materia')
     materiaElement.innerHTML = `
         <div class='materia__buttons'>
-            <a class='materia__link' href=''>
+            <a class='materia__link' href='../contenido/contenidos.html'>
                 <button class='materia__button'>
                     <svg class='materia__icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'>
                         <path fill-rule='evenodd'
