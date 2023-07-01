@@ -1,3 +1,6 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 :root {
     --primary-bg: #715AFF;
     --primary-text: #fff;
@@ -6,20 +9,129 @@
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Calendario */
+
+.wrapper {
+    width: 95%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    margin: auto;
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .icons {
+    display: flex;
+}
+
+header .icons span {
+    height: 10px;
+    width: 50px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 5px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.icons span:last-child {
+    margin-right: -10px;
+}
+
+header .icons span:hover {
+    color: black
+}
+
+header .current-date {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.calendar {
+    padding: 15px;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar .days {
+    margin-bottom: 10px;
+}
+
+.calendar li {
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 0.8rem;
+}
+
+.calendar .weeks li {
+    font-weight: 400;
+    cursor: default;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 15px;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: #9B59B6;
+}
+
+.days li:not(.active):hover::before {
+    background: #f2f2f2;
 }
 
 /* ---------------------------------------- */
 
-.primary{
+.primary {
     background: var(--primary-bg);
     color: var(--primary-text);
 }
 
-.secondary{
+.secondary {
     background: var(--secondary-bg);
     color: var(--secondary-text);
 }
@@ -35,6 +147,7 @@
 /* ---------------------------------------- */
 
 .nav {
+    position: fixed;
     background: var(--primary-bg);
     color: var(--primary-text);
     display: flex;
@@ -44,29 +157,30 @@
     gap: 2rem;
     padding: 1rem .5rem;
     transition: width 1s;
+    min-height: 100vh;
 }
 
-.nav__open{
-    width: 50% !important;
+.nav__open {
+    width: 60% !important;
 }
 
-.nav__icon{
+.nav__icon {
     width: 50px;
     height: 50px;
     fill: var(--primary-text);
 }
 
-.nav__content{
+.nav__content {
     width: 100%;
     opacity: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     transition: opacity 1s;
 }
 
-.nav__content__show{
+.nav__content__show {
     opacity: 1 !important;
 }
 
@@ -75,7 +189,7 @@
 }
 
 .nav__logo {
-    width: 50%;
+    width: 30%;
     height: auto;
 }
 
@@ -95,6 +209,7 @@
 }
 
 .nav__title {
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -112,11 +227,11 @@
 /* ---------------------------------------- */
 
 .content {
-    padding: 1rem 0;
-    width: auto;
+    width: 80%;
+    margin-left: 20%;
 }
 
-.content__title{
+.content__title {
     text-align: center;
     font-size: 1.5rem;
     margin: 2rem 0;
@@ -124,7 +239,7 @@
 
 /* ---------------------------------------- */
 
-.perfil{
+.perfil {
     padding: 1rem;
     align-items: center;
     display: flex;
@@ -132,14 +247,14 @@
     justify-content: center;
 }
 
-.perfil__left{
+.perfil__left {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
 }
 
-.perfil__right{
+.perfil__right {
     width: 100%;
     margin-top: 3rem;
     display: flex;
@@ -148,7 +263,7 @@
     align-items: center;
 }
 
-.perfil__img{
+.perfil__img {
     border-radius: 10px;
     box-shadow: 0px 10px 15px -3px #0000001a;
     width: 70%;
@@ -157,7 +272,7 @@
 
 /* ---------------------------------------- */
 
-.button{
+.button {
     border-radius: 10px;
     border: none;
     padding: .25rem 0;
@@ -167,26 +282,26 @@
 
 /* ---------------------------------------- */
 
-.card{
+.card {
     width: 100%;
     background: #F5F5F5;
     border-radius: 10px;
     padding: 1rem;
 }
 
-.card__title{
+.card__title {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.card__content{
+.card__content {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.card__info{
+.card__info {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -194,12 +309,12 @@
     color: #333333;
 }
 
-.card__label{
+.card__label {
     color: #333333;
     font-size: .9rem;
 }
 
-.card__input{
+.card__input {
     cursor: auto;
     color: #333333;
     border: none;
@@ -209,7 +324,7 @@
     font-size: 1rem;
 }
 
-.card__input:focus{
+.card__input:focus {
     outline: none;
 }
 
@@ -223,11 +338,11 @@
         width: 20%;
     }
 
-    .nav__icon{
+    .nav__icon {
         display: none;
     }
 
-    .nav__content{
+    .nav__content {
         opacity: 1;
     }
 
@@ -237,77 +352,84 @@
     }
 
     /* ---------------------------------------- */
-    
-    .content{
+
+    .content {
         width: 80%;
     }
 
-    .content__title{
+    .content__title {
         font-size: 2rem;
     }
-    
+
     /* ---------------------------------------- */
-    
-    .perfil{
+
+    .perfil {
         flex-direction: row;
         width: 100%;
     }
-    
-    .perfil__left{
+
+    .perfil__left {
         width: 50%;
     }
-    
-    .perfil__right{
+
+    .perfil__right {
         margin-top: 0;
         width: 50%;
     }
 
-    .perfil__img{
+    .perfil__img {
         width: 50%;
     }
 
-    .button{
+    .button {
         width: 50%;
     }
 
     /* ---------------------------------------- */
 
-    .card__title{
+    .card__title {
         font-size: 1.3rem;
     }
 
-    .card__content{
+    .card__content {
         margin-top: 1rem;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .card__info{
+    .card__info {
         width: 45%;
     }
-    
+
 }
 
-.cabecera{
+.cabecera {
     display: flex;
     padding: 0.7rem;
-    background-color:  var(--secondary-bg);
+    background-color: var(--secondary-bg);
     justify-content: flex-end;
     align-items: center;
 }
-.btn-header{
+
+.btn-header {
     background-color: var(--secondary-bg);
     border: none;
     margin: 0 0.2rem;
     color: var(--primary-bg);
     cursor: pointer;
 }
-.btn-header:hover{
+
+.btn-header:hover {
     text-decoration: underline;
 }
 
-#img-perfil{
+.btn-link {
+    text-decoration: none;
+    color: #000;
+}
+
+#img-perfil {
     width: 3.s2rem;
     height: 3.2rem;
     margin: 0.5rem;
