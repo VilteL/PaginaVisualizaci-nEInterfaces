@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    padding: 1rem 0;
 }
 
 .materia{
@@ -32,14 +33,12 @@
 }
 
 .materia__button{
-    color: #fff;
-    fill: #fff;
-    background: #000;
+    color: #000;
+    fill: #000;
     width: 100%;
     padding: .5rem 0;
     border-radius: 10px;
     border: none;
-    box-shadow: 0 8px 1px -3px var(--primary-bg);
 }
 
 .materia__icon{
@@ -87,7 +86,7 @@
     }
 
     .materia__link{
-        width: calc(100% / 3 - 1rem);
+        width: calc(100% / 2 - 1rem);
     }
 
     .materia__titles{
